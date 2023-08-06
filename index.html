@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <label for="">مجموعك</label>
+            <input placeholder="اكتب مجموعك هنا" onchange="output()" type="text" id="notRead">
+        </div>
+        <div>
+            <label for="">المجموع النهائي</label>
+            <input placeholder="اكتب المجموع الكلي هنا" onchange="output()" type="text" name="" id="read" value="650">
+        </div>
+        <p onchange="output()" id="kara">مجموعك بالنسبة المئوية: <span id="demo"></span></p>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
