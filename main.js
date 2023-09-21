@@ -1,6 +1,21 @@
-function output() {
-  let value1 = document.getElementById("notRead").value;
-  let value2 = document.getElementById("read").value;
-  let nate = `${((value1 * 100) / value2).toFixed(2)}%`;
-  document.getElementById("demo").innerHTML = nate;
-}
+const yourTotal = document.getElementById("yourTotal");
+const total = document.getElementById("total");
+const result = document.getElementById("result");
+
+document.querySelector("button").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (yourTotal.value === "" && total.value === "") {
+    result.value = "الرجاء التأكد من الارقام المدخلة";
+    setTimeout(() => {
+      result.value = "";
+      result.style.color = "#fff";
+    }, 1000);
+    result.style.color = "red";
+  } else if (yourTotal.value === "") {
+    yourTotal.value = (result.value * total.value) / 100;
+    result.style.color = "#fff";
+  } else {
+    result.value = `${((yourTotal.value * 100) / total.value).toFixed(2)}%`;
+    result.style.color = "#fff";
+  }
+});
